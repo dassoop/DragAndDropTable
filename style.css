@@ -1,0 +1,65 @@
+:root
+{
+    --maincolor: #1e90ff;
+}
+#div1, #div2 
+{
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+}
+table, td, tr
+{
+    border: 1px solid black;
+    width: 100px;
+}
+.note-control
+{
+    display:table; 
+    border-collapse: separate;
+    border-spacing: 0px;
+    background-color: white; 
+    border:1px solid lightgray; 
+    padding: 0px; 
+    border-radius: 5px;
+    width: 100px;
+}
+.note-control-btn
+{
+    display: table-cell; 
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+    border: 0px;
+}
+    .note-control-btn:hover
+    {
+       background-color: darkgray;
+    }
+.note-control-select
+{
+    display: table-cell; 
+    width: 55px;
+    height: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border: 1px solid lightgray;
+    text-align: center;
+}
+    .note-control-select::-ms-expand 
+    {
+        display: none;
+    }
+    ::selection 
+    {
+        background-color: transparent;
+    }
+.note-control-drag
+{
+    margin:0px;
+    display: table-cell; 
+    background-color: lightgray; 
+    border:1px solid lightgray; 
+}
