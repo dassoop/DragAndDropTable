@@ -32,7 +32,7 @@ function hover(ev)
     let id = ev.currentTarget.id.replace('drag-', '#note-control-select-')
     console.log('Enter: ' + $(id).val())
     let noteDisplay = '#note-display-' + $(id).val()
-    $(noteDisplay).css('background-color', 'purple')
+    $(noteDisplay).css('background-color', '#d0acd0')
 }
 
 function leave(ev)
@@ -52,3 +52,11 @@ function reset(ev)
     $(newId).val($(newId).attr('data-defaultValue'))
 }
 
+function changeNote(ev)
+{
+    $('.note-display').css('background-color', 'white')
+    let id = '#' + ev.currentTarget.id
+    console.log('Enter: ' + $(id).val())
+    let noteDisplay = '#note-display-' + $(id).val()
+    $(noteDisplay).css('background-color', '#d0acd0')
+}

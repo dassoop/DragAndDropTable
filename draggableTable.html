@@ -38,7 +38,7 @@
                         <span class="note-control ms-auto">
                             <button class="note-control-btn" id="btn-reset-2" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
                             <div class="note-control-drag" id="drag-2" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
-                                <select id="note-control-select-2" class="note-control-select" data-defaultValue="2">
+                                <select id="note-control-select-2" class="note-control-select" data-defaultValue="2" onchange="changeNote(event)">
                                     <option value="2" selected>D0</option>
                                     <option value="1">C#0</option>
                                     <option value="0">C0</option>
@@ -48,7 +48,7 @@
                         </span>
                     </td>
                     <td>
-                        <p id="note-display-2" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="2">D0</p>
+                        <p class="note-display" id="note-display-2" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="2">D0</p>
                     </td>
                 </tr>
                 <tr>
@@ -56,7 +56,7 @@
                         <span class="note-control ms-auto">
                             <button class="note-control-btn" id="btn-reset-1" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
                             <div class="note-control-drag" id="drag-1" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
-                                <select id="note-control-select-1" class="note-control-select" data-defaultValue="1">
+                                <select id="note-control-select-1" class="note-control-select" data-defaultValue="1" onchange="changeNote(event)">
                                     <option value="2">D0</option>
                                     <option value="1" selected>C#0</option>
                                     <option value="0">C0</option>
@@ -66,7 +66,7 @@
                         </span>
                     </td>
                     <td>
-                        <p id="note-display-1" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="1">C#0</p>
+                        <p class="note-display" id="note-display-1" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="1">C#0</p>
                     </td>
                 </tr>
                 <tr>
@@ -74,7 +74,7 @@
                         <span class="note-control ms-auto">
                             <button class="note-control-btn" id="btn-reset-0" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
                             <div class="note-control-drag" id="drag-0" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
-                                <select id="note-control-select-0" class="note-control-select" data-defaultValue="0">
+                                <select id="note-control-select-0" class="note-control-select" data-defaultValue="0" onchange="changeNote(event)">
                                     <option value="2">D0</option>
                                     <option value="1">C#0</option>
                                     <option value="0" selected>C0</option>
@@ -84,7 +84,7 @@
                         </span>
                     </td>
                     <td>
-                        <p id="note-display-0" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="0">C0</p>
+                        <p class="note-display" id="note-display-0" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="0">C0</p>
                     </td>
                 </tr>
             </table>
