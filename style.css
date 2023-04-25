@@ -2,6 +2,10 @@
 {
     --maincolor: #1e90ff;
 }
+*
+{
+    -webkit-appearance: none;
+}
 #div1, #div2 
 {
     float: left;
