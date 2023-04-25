@@ -4,7 +4,8 @@
 }
 *
 {
-    -webkit-appearance: none;
+
+    color: black;
 }
 #div1, #div2 
 {
@@ -67,3 +68,9 @@ table, td, tr
     background-color: lightgray; 
     border:1px solid lightgray; 
 }
+    .note-control-drag:hover 
+    {
+        border: 1px solid purple;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }

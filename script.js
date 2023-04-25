@@ -27,6 +27,22 @@ function drop(ev)
     $(id).val(newValue)
 }
 
+function hover(ev)
+{
+    let id = ev.currentTarget.id.replace('drag-', '#note-control-select-')
+    console.log('Enter: ' + $(id).val())
+    let noteDisplay = '#note-display-' + $(id).val()
+    $(noteDisplay).css('background-color', 'purple')
+}
+
+function leave(ev)
+{
+    let id = ev.currentTarget.id.replace('drag-', '#note-control-select-')
+    console.log('Leave: ' + $(id).val())
+    let noteDisplay = '#note-display-' + $(id).val()
+    $(noteDisplay).css('background-color', 'white')
+}
+
 function reset(ev)
 {
     let targetId = ev.currentTarget.id
