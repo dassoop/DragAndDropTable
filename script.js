@@ -20,6 +20,7 @@ function dragEnd(ev)
 function drop(ev) 
 {
     ev.preventDefault();
+    $('.note-display').css('background-color', 'white')
     let newValue = $(ev.target).attr('data-number')
     var id = '#note-control-select-' + ev.dataTransfer.getData("id");
     console.log('oldID: ' + id)
@@ -59,4 +60,9 @@ function changeNote(ev)
     console.log('Enter: ' + $(id).val())
     let noteDisplay = '#note-display-' + $(id).val()
     $(noteDisplay).css('background-color', '#d0acd0')
+}
+
+function highlightBackground()
+{
+    //function to unify highlight and de-highlight backgrounds
 }
