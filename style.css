@@ -19,22 +19,23 @@
 table, td, tr
 {
     border: 1px solid black;
-    width: 100px;
+    /* width: 100px; */
 }
 .note-control
 {
-    display:table; 
+    /* display:table;  */
+    display: flex;
     border-collapse: separate;
     border-spacing: 0px;
     background-color: white; 
     border:1px solid lightgray; 
     padding: 0px; 
     border-radius: 5px;
-    width: 100px;
+    flex-wrap: nowrap;
 }
 .note-control-btn
 {
-    display: table-cell; 
+    /* display: table-cell;  */
     border-top-left-radius: 5px; 
     border-bottom-left-radius: 5px;
     border: 0px;
@@ -45,8 +46,7 @@ table, td, tr
     }
 .note-control-select
 {
-    display: table-cell; 
-    width: 55px;
+    /* width: 55px;  */
     height: 100%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -63,10 +63,10 @@ table, td, tr
     }
 .note-control-drag
 {
-    margin:0px;
-    display: table-cell; 
+    /* display: table-cell;  */
     background-color: lightgray; 
     border:1px solid lightgray; 
+    width: 100%;
 }
     .note-control-drag:hover 
     {
@@ -74,3 +74,7 @@ table, td, tr
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
     }
+.note-control-drag-icon
+{
+    
+}
