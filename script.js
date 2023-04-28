@@ -41,7 +41,7 @@ function leave(ev)
 
 function reset(ev)
 {
-    let select = $('#' + ev.currentTarget.id).closest('span').find('div').find('select')
+    let select = $('#' + ev.currentTarget.id).closest('div').find('div').find('select')
     select.val(select.attr('data-defaultValue'))
 }
 

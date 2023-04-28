@@ -4,12 +4,98 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <script src="https://kit.fontawesome.com/59b01b883c.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
-        <link href="style.css" rel="stylesheet" type="text/css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <style>
+            :root
+            {
+                --maincolor: #1e90ff;
+            }
+            *
+            {
 
+                color: black;
+            }
+            table, td, tr
+            {
+                border: 1px solid black;
+                /* width: 100px; */
+            }
+            button
+            {
+                -webkit-appearance: none;
+            }
+            .note-control
+            {
+                margin: auto;
+                display: flex;
+                background-color: white; 
+                border:1px solid lightgray; 
+                padding: 0px; 
+                border-radius: 5px;
+                /* min-width: 100px;
+                max-width: 100px;  */
+            }
+            .note-control-btn
+            {
+                border-top-left-radius: 5px; 
+                border-bottom-left-radius: 5px;
+                border: none;
+                width: 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                .note-control-btn:hover
+                {
+                background-color: darkgray;
+                }
+            .note-control-select
+            {
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                border: 1px solid lightgray;
+                text-align: center;
+                min-width: 75%;
+                background-color: white;
+                -webkit-appearance: none;
+            }
+                .note-control-select::-ms-expand 
+                {
+                    display: none;
+                }
+                ::selection 
+                {
+                    background-color: transparent;
+                }
+            .note-control-drag
+            {
+                background-color: lightgray; 
+                border:1px solid lightgray; 
+                width: 100%;
+                display: flex; 
+            }
+                .note-control-drag:hover 
+                {
+                    border: 1px solid purple;
+                    border-top-right-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                }
+            .note-control-drag-icon
+            {
+                display: flex; 
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            .note-display
+            {
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
            <div class="container mt-5">
+            <input type="range" min="75" max="300" value="100" class="slider" id="fader">
             <table class="table table-light">
                 <tr>
                     <td><button onclick="if(confirm('Are you sure you want to reset all notes? Unsaved changes will be lost.')) resetAllNotes(event);">Reset All</button></td>
@@ -18,7 +104,7 @@
 
                 <tr>
                     <td>
-                        <div class="note-control ms-auto">
+                        <div id="test-width" class="note-control ms-auto">
                             <button class="note-control-btn" id="btn-reset-2" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
                             <div class="note-control-drag" id="drag-2" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
                                 <select class="note-control-select" data-defaultValue="2" onchange="changeNote(event)">
@@ -34,7 +120,7 @@
                         <p class="note-display" id="note-display-2" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="2">D0</p>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td>
                         <div class="note-control ms-auto">
                             <button class="note-control-btn" id="btn-reset-1" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
@@ -69,9 +155,22 @@
                     <td>
                         <p class="note-display" id="note-display-0" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="0">C0</p>
                     </td>
-                </tr>
+                </tr> -->
             </table>
            </div>
+
+
+        <script>
+            let slider = document.getElementById('fader')
+            let div = document.getElementById('test-width')
+
+            console.log(slider)
+            console.log(div)
+            slider.addEventListener('input', e => {
+                console.log('change')
+                div.style.width = e.target.value + 'px'
+            })
+        </script>
 
         <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
