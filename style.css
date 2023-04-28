@@ -21,22 +21,26 @@ table, td, tr
     border: 1px solid black;
     /* width: 100px; */
 }
+button
+{
+    -webkit-appearance: none;
+}
 .note-control
 {
     margin: auto;
-    display: flex;
+    display: inline-flex;
     background-color: white; 
     border:1px solid lightgray; 
     padding: 0px; 
     border-radius: 5px;
-    width: 100px;
+    text-align: center;
 }
 .note-control-btn
 {
-    /* display: table-cell;  */
     border-top-left-radius: 5px; 
     border-bottom-left-radius: 5px;
     border: none;
+    width: 25px;
 }
     .note-control-btn:hover
     {
@@ -44,12 +48,11 @@ table, td, tr
     }
 .note-control-select
 {
-    /* width: 55px;  */
-    height: 100%;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     border: 1px solid lightgray;
     text-align: center;
+    -webkit-appearance: none;
 }
     .note-control-select::-ms-expand 
     {
@@ -61,10 +64,8 @@ table, td, tr
     }
 .note-control-drag
 {
-    /* display: table-cell;  */
     background-color: lightgray; 
     border:1px solid lightgray; 
-    width: 100%;
 }
     .note-control-drag:hover 
     {
