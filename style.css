@@ -4,13 +4,11 @@
 }
 *
 {
-
     color: black;
 }
 table, td, tr
 {
     border: 1px solid black;
-    /* width: 100px; */
 }
 button
 {
@@ -18,14 +16,13 @@ button
 }
 .note-control
 {
-    margin: auto;
     display: flex;
     background-color: white; 
     border:1px solid lightgray; 
     padding: 0px; 
     border-radius: 5px;
-    min-width: 100px;
-    max-width: 100px; 
+    min-width: 120px;
+    max-width: 120px; 
 }
 .note-control-btn
 {

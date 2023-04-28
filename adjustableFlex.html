@@ -95,6 +95,7 @@
     </head>
     <body>
            <div class="container mt-5">
+            <p id="width-display"></p>
             <input type="range" min="75" max="300" value="100" class="slider" id="fader">
             <table class="table table-light">
                 <tr>
@@ -120,42 +121,6 @@
                         <p class="note-display" id="note-display-2" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="2">D0</p>
                     </td>
                 </tr>
-                <!-- <tr>
-                    <td>
-                        <div class="note-control ms-auto">
-                            <button class="note-control-btn" id="btn-reset-1" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
-                            <div class="note-control-drag" id="drag-1" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
-                                <select class="note-control-select" data-defaultValue="1" onchange="changeNote(event)">
-                                    <option value="2">D0</option>
-                                    <option value="1" selected>C#0</option>
-                                    <option value="0">C0</option>
-                                </select>
-                                <span class="note-control-drag-icon ms-1"><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p class="note-display" id="note-display-1" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="1">C#0</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <div class="note-control ms-auto">
-                            <button class="note-control-btn" id="btn-reset-0" onclick="reset(event)"><i class="fa-solid fa-rotate-left"></i></button>
-                            <div class="note-control-drag" id="drag-0" draggable="true" ondragstart="drag(event)" ondragend="dragEnd(event)" ondrop="drop(event)" onmouseover="hover(event)" onmouseleave="leave(event)">
-                                <select class="note-control-select" data-defaultValue="0" onchange="changeNote(event)">
-                                    <option value="2">D0</option>
-                                    <option value="1">C#0</option>
-                                    <option value="0" selected>C0</option>
-                                </select>
-                                <span class="note-control-drag-icon ms-1"><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                            </div>
-                        </div>
-                    </td>
-                    <td>
-                        <p class="note-display" id="note-display-0" ondrop="drop(event)" ondragover="allowDrop(event)" data-number="0">C0</p>
-                    </td>
-                </tr> -->
             </table>
            </div>
 
@@ -163,11 +128,13 @@
         <script>
             let slider = document.getElementById('fader')
             let div = document.getElementById('test-width')
+            let display = document.getElementById('width-display')
 
             console.log(slider)
             console.log(div)
             slider.addEventListener('input', e => {
                 console.log('change')
+                display.innerHTML = e.target.value + 'px'
                 div.style.width = e.target.value + 'px'
             })
         </script>
